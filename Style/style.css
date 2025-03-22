@@ -1,0 +1,244 @@
+/* ------------------------ Products Grid ------------------------ */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the grid */
+}
+
+.product-card {
+    background-color: #fff; /* White background for cards */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure content stays within the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    text-align: center; /* Center-align content */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.product-card img {
+    width: 100%; /* Full width of the card */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensure images cover the area */
+    border-bottom: 1px solid #e0e0e0; /* Separator between image and text */
+}
+
+.product-card h4 {
+    font-size: 18px; /* Product name size */
+    font-weight: 500; /* Medium weight */
+    color: #222; /* Dark text color */
+    margin: 16px 0 8px; /* Spacing around the title */
+}
+
+.product-card p {
+    font-size: 16px; /* Price size */
+    font-weight: 400; /* Regular weight */
+    color: #097a6e; /* Accent color for price */
+    margin: 0 0 16px; /* Spacing below the price */
+}
+
+.product-card .add-to-cart {
+    background-color: #000; /* Black button background */
+    color: #fff; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Button padding */
+    font-size: 14px; /* Button text size */
+    font-weight: 500; /* Medium weight */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    margin-bottom: 16px; /* Spacing below the button */
+}
+
+.product-card .add-to-cart:hover {
+    background-color: #097a6e; /* Accent color on hover */
+}
+
+/* ------------------------ Responsive Adjustments ------------------------ */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller cards on mobile */
+        gap: 15px; /* Smaller gap on mobile */
+        padding: 10px; /* Less padding on mobile */
+    }
+
+    .product-card img {
+        height: 150px; /* Smaller image height on mobile */
+    }
+
+    .product-card h4 {
+        font-size: 16px; /* Smaller title on mobile */
+    }
+
+    .product-card p {
+        font-size: 14px; /* Smaller price on mobile */
+    }
+
+    .product-card .add-to-cart {
+        padding: 8px 16px; /* Smaller button on mobile */
+        font-size: 13px; /* Smaller button text on mobile */
+    }
+}
+
+/* ------------------------- Info Section --------------------- */
+.information {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #878787;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 200px; /* Allow flexible sizing */
+}
+
+.info .info-icon img {
+    width: 50px; /* Smaller icon size */
+    margin-right: 20px;
+}
+
+.info .info-text h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #222222;
+    margin-bottom: 4px;
+}
+
+.info .info-text p {
+    color: #878787;
+    font-size: 14px;
+}
+
+
+/* ------------------------ Collection --------------------- */
+.collection {
+    padding: 60px 0;
+}
+
+.collection .container {
+    width: 100%;
+    padding-inline: 30px;
+    margin-bottom: 30px;
+}
+
+.collection-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+.collection-card {
+    background-color: gray;
+    min-height: 400px;
+    padding: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.collection-card .card-title {
+    margin-bottom: 12px;
+    color: #fff; /* Ensure text is visible */
+}
+
+.collection-card .card-text {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    margin-block-end: auto;
+}
+
+.has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s ease;
+}
+
+.hover\:shine:hover .has-bg-image {
+    transform: scale(1.15);
+}
+
+.btn-link {
+    color: #000;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    transition: 0.25s ease;
+}
+
+/* ------------------------ Newsletter ----------------------- */
+.news {
+    width: 100%;
+    background-color: #dbd9d9bb;
+    height: 200px;
+    padding: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.news .news-text h4 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.news .news-text p {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(17, 17, 17, 0.8);
+}
+
+.news .Subscribe-form {
+    display: flex;
+}
+
+.news .Subscribe-form input {
+    width: 300px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #f1f1f1;
+    color: #868686;
+}
+
+.news .Subscribe-form button {
+    background-color: #000;
+    color: #fff;
+    padding: 6px 20px;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .news {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .news .Subscribe-form {
+        margin-top: 20px;
+    }
+}

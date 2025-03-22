@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Head content remains the same -->
+</head>
+<body>
+    <header class="container" id="header">
+        <!-- Header content remains the same -->
+    </header>
+    <main class="cart_page">
+        <div class="container">
+            <h1>Shopping Bag</h1>
+            <div class="content">
+                <div class="left_side_cart">
+                    <div class="cart_title">
+                        <h2>My shopping bag <span id="cart_counts"></span></h2>
+                    </div>
+                    <div class="cart_products">
+                        <!-- add cart products in js -->
+                    </div>
+                </div>
+                <div class="right_side_cart">
+                    <div class="Promotional_code">
+                        <h2>Do you have a Promotional Code?</h2>
+                        <div class="apply_code">
+                            <input type="text" id="code" placeholder="Promo code">
+                            <button>Done</button>
+                        </div>
+                    </div>
+                    <div class="summary">
+                        <h2>Order Summary</h2>
+                        <div class="summary_price">
+                            <div>
+                                <h4>Subtotal</h4>
+                                <span id="Subtotal"></span>
+                            </div>
+                            <div class="Delivery">
+                                <h4>Delivery</h4>
+                                <span id="Delivery">$70.00</span>
+                            </div>
+                            <div>
+                                <h4>Total Order</h4>
+                                <span id="total_order"></span>
+                            </div>
+                        </div>
+                        <button class="checkout" onclick="checkOut();">Check Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <!-- Footer content remains the same -->
+    </footer>
+    <button id="scrollBtn"><ion-icon name="arrow-up-outline" id="btn-up"></ion-icon></button>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/cart.js"></script>
+</body>
+</html>
